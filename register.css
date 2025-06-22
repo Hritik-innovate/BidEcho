@@ -1,0 +1,163 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+/* Form Container */
+.form-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 20px;
+}
+
+.form-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* Input Groups */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: 0;
+    left: 15px;
+    font-size: 12px;
+    background: rgba(74, 144, 226, 0.9);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 15px;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #3a7bc8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.6);
+}
+
+/* Switch Link */
+.switch {
+    text-align: center;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.switch a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    display: none;
+}
+
+/* Particles Background */
+.particles {
+    position: absolute;
+    top: 0;
+}
